@@ -1,0 +1,1713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Complete Load Solutions — The Missing Verification Layer in the Construction Materials Industry. US Patents 10,417,610 and 10,330,520.">
+<meta name="keywords" content="load verification, ready mix concrete, construction materials, chain of custody, digital verification, plant automation, Complete Load Solutions">
+<meta property="og:title" content="Complete Load Solutions — The Missing Verification Layer">
+<meta property="og:description" content="Every load dispatched, every batch authorized, every ticket generated operates on one unverified assumption. We hold the patents that solve it.">
+<meta property="og:type" content="website">
+<title>Complete Load Solutions LLC — The Missing Verification Layer</title>
+<style>
+  :root {
+    --navy-dark: #0f2347;
+    --navy: #1a3a6b;
+    --navy-med: #15326e;
+    --blue-mid: #378ADD;
+    --blue-light: #B5D4F4;
+    --blue-pale: #E6F1FB;
+    --white: #ffffff;
+    --off-white: #f0f5fc;
+    --gray-light: #e8edf5;
+    --gray-med: #6b7a9a;
+    --gray-dark: #3a4a6a;
+    --accent: #4a7cc7;
+    --red-alert: #c0392b;
+    --green: #2a8a4a;
+    --text-dark: #1a2540;
+    --text-body: #3a4a6a;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    color: var(--text-dark);
+    background: var(--white);
+    line-height: 1.7;
+  }
+
+  /* ── NAVIGATION ── */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: var(--navy-dark);
+    border-bottom: 2px solid var(--accent);
+    padding: 0 2rem;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+  }
+
+  .nav-seal {
+    width: 40px;
+    height: 40px;
+  }
+
+  .nav-name {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--blue-light);
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--white); }
+
+  .nav-cta {
+    background: var(--accent);
+    color: var(--white) !important;
+    padding: 8px 20px;
+    border-radius: 3px;
+    font-weight: 700 !important;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%, #1e4a8a 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 2rem 60px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234a7cc7' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.4;
+  }
+
+  .hero-content {
+    position: relative;
+    max-width: 900px;
+  }
+
+  .hero-seal {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 2rem;
+    display: block;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+    color: var(--blue-light);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-title span {
+    color: var(--blue-mid);
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1rem, 2.5vw, 1.35rem);
+    color: var(--blue-light);
+    font-style: italic;
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.6;
+  }
+
+  .hero-divider {
+    width: 80px;
+    height: 2px;
+    background: var(--accent);
+    margin: 0 auto 2.5rem;
+  }
+
+  .hero-statement {
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    color: var(--blue-pale);
+    max-width: 680px;
+    margin: 0 auto 3rem;
+    line-height: 1.8;
+  }
+
+  .hero-btns {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--accent);
+    color: var(--white);
+    padding: 14px 32px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: background 0.2s;
+  }
+
+  .btn-primary:hover { background: var(--blue-mid); }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--blue-light);
+    padding: 14px 32px;
+    border-radius: 3px;
+    border: 1px solid var(--accent);
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: all 0.2s;
+  }
+
+  .btn-secondary:hover {
+    background: var(--accent);
+    color: var(--white);
+  }
+
+  /* ── SECTIONS ── */
+  section {
+    padding: 80px 2rem;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 4px;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+    font-style: normal;
+  }
+
+  .section-title {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .section-title.light { color: var(--white); }
+
+  .section-lead {
+    font-size: 1.1rem;
+    color: var(--text-body);
+    max-width: 720px;
+    margin-bottom: 3rem;
+    line-height: 1.8;
+  }
+
+  .section-lead.light { color: var(--blue-light); }
+
+  .section-divider {
+    width: 60px;
+    height: 3px;
+    background: var(--accent);
+    margin-bottom: 2rem;
+  }
+
+  /* ── ASSUMPTION BANNER ── */
+  .assumption {
+    background: var(--navy-dark);
+    padding: 80px 2rem;
+  }
+
+  .assumption-box {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .assumption-quote {
+    font-size: clamp(1.3rem, 3vw, 2rem);
+    color: var(--white);
+    font-style: italic;
+    line-height: 1.6;
+    border-left: 4px solid var(--accent);
+    padding: 2rem 3rem;
+    background: rgba(74, 124, 199, 0.1);
+    border-radius: 0 4px 4px 0;
+    text-align: left;
+    margin: 2rem 0;
+  }
+
+  .assumption-sub {
+    font-size: 1rem;
+    color: var(--blue-light);
+    margin-top: 1.5rem;
+    line-height: 1.8;
+  }
+
+  /* ── ACHIEVEMENT CARDS ── */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
+
+  .card {
+    background: var(--white);
+    border: 1px solid var(--blue-light);
+    border-radius: 4px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  }
+
+  .card-num {
+    width: 36px;
+    height: 36px;
+    background: var(--navy);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  .card-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 0.75rem;
+  }
+
+  .card-body {
+    font-size: 0.9rem;
+    color: var(--text-body);
+    line-height: 1.7;
+  }
+
+  .card-tag {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 0.75rem;
+    color: var(--gray-med);
+    letter-spacing: 1px;
+    font-style: italic;
+  }
+
+  /* ── STACK ── */
+  .stack {
+    background: var(--off-white);
+  }
+
+  .stack-layers {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2.5rem;
+  }
+
+  .layer {
+    display: grid;
+    grid-template-columns: 90px 1fr auto;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    border-radius: 4px;
+    border: 1px solid var(--blue-light);
+    background: var(--white);
+    transition: transform 0.2s;
+  }
+
+  .layer:hover { transform: translateX(4px); }
+
+  .layer.missing {
+    background: var(--navy);
+    border-color: var(--accent);
+    border-width: 2px;
+    transform: none;
+  }
+
+  .layer.missing:hover { transform: none; }
+
+  .layer-num {
+    text-align: center;
+  }
+
+  .layer-num-label {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: var(--gray-med);
+    text-transform: uppercase;
+  }
+
+  .layer.missing .layer-num-label { color: var(--blue-light); }
+
+  .layer-num-val {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1;
+  }
+
+  .layer.missing .layer-num-val { color: var(--white); }
+
+  .layer-info {}
+
+  .layer-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 0.3rem;
+  }
+
+  .layer.missing .layer-title {
+    color: var(--white);
+    font-size: 1.1rem;
+  }
+
+  .layer-platforms {
+    font-size: 0.85rem;
+    color: var(--gray-med);
+    font-style: italic;
+    margin-bottom: 0.3rem;
+  }
+
+  .layer.missing .layer-platforms { color: var(--blue-light); }
+
+  .layer-desc {
+    font-size: 0.85rem;
+    color: var(--text-body);
+  }
+
+  .layer.missing .layer-desc { color: var(--blue-pale); }
+
+  .layer-status {
+    text-align: right;
+    min-width: 120px;
+  }
+
+  .status-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .status-exists {
+    background: var(--blue-pale);
+    color: var(--navy);
+  }
+
+  .status-missing {
+    background: var(--red-alert);
+    color: var(--white);
+  }
+
+  .stack-insight {
+    margin-top: 2.5rem;
+    padding: 2rem;
+    background: var(--navy-dark);
+    border-radius: 4px;
+    color: var(--blue-light);
+    font-size: 1rem;
+    font-style: italic;
+    line-height: 1.8;
+    text-align: center;
+  }
+
+  .stack-insight strong { color: var(--white); }
+
+  /* ── DISCHARGE ── */
+  .discharge {
+    background: var(--navy-dark);
+  }
+
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2.5rem;
+  }
+
+  .compare-col {
+    padding: 2rem;
+    border-radius: 4px;
+  }
+
+  .compare-col.today {
+    background: rgba(192, 57, 43, 0.1);
+    border: 1px solid rgba(192, 57, 43, 0.3);
+  }
+
+  .compare-col.verified {
+    background: rgba(42, 138, 74, 0.1);
+    border: 1px solid rgba(42, 138, 74, 0.3);
+  }
+
+  .compare-heading {
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+  }
+
+  .compare-col.today .compare-heading { color: #e74c3c; }
+  .compare-col.verified .compare-heading { color: #2ecc71; }
+
+  .compare-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: var(--blue-light);
+    line-height: 1.6;
+  }
+
+  .compare-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 6px;
+  }
+
+  .dot-red { background: #e74c3c; }
+  .dot-green { background: #2ecc71; }
+
+  .patent-badge {
+    margin-top: 2rem;
+    padding: 1rem 1.5rem;
+    background: rgba(74, 124, 199, 0.2);
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+    font-size: 0.85rem;
+    color: var(--blue-light);
+    text-align: center;
+    font-style: italic;
+  }
+
+  .patent-badge strong { color: var(--white); }
+
+  /* ── WHY NOW ── */
+  .why-now {
+    background: var(--white);
+  }
+
+  .reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2.5rem;
+  }
+
+  .reason-card {
+    padding: 2rem;
+    border-left: 4px solid var(--accent);
+    background: var(--off-white);
+    border-radius: 0 4px 4px 0;
+  }
+
+  .reason-num {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--blue-light);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .reason-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 0.75rem;
+  }
+
+  .reason-body {
+    font-size: 0.9rem;
+    color: var(--text-body);
+    line-height: 1.7;
+  }
+
+  /* ── LAYER 3 PROBLEM ── */
+  .layer3 {
+    background: var(--off-white);
+  }
+
+  .companies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+
+  .company-pill {
+    padding: 1rem 1.5rem;
+    background: var(--white);
+    border: 1px solid var(--blue-light);
+    border-radius: 4px;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--navy);
+  }
+
+  .company-pill-sub {
+    font-size: 0.75rem;
+    color: var(--gray-med);
+    font-weight: 400;
+    margin-top: 0.3rem;
+  }
+
+  .insight-box {
+    margin-top: 2.5rem;
+    padding: 2.5rem;
+    background: var(--navy);
+    border-radius: 4px;
+    color: var(--blue-light);
+  }
+
+  .insight-box h3 {
+    font-size: 1.2rem;
+    color: var(--white);
+    margin-bottom: 1rem;
+  }
+
+  .insight-box p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+
+  .insight-box p:last-child { margin-bottom: 0; }
+
+  /* ── PATENTS ── */
+  .patents {
+    background: var(--navy-dark);
+  }
+
+  .patents-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2.5rem;
+  }
+
+  .patent-card {
+    padding: 2.5rem;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+  }
+
+  .patent-number {
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    color: var(--blue-mid);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+
+  .patent-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 1rem;
+  }
+
+  .patent-body {
+    font-size: 0.9rem;
+    color: var(--blue-light);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+
+  .patent-meta {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .patent-meta-item {
+    font-size: 0.8rem;
+    color: var(--gray-med);
+  }
+
+  .patent-meta-item strong {
+    color: var(--blue-light);
+    display: block;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+
+  /* ── TEAM ── */
+  .team {
+    background: var(--white);
+  }
+
+  .team-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 2.5rem;
+  }
+
+  .team-member {
+    padding: 2.5rem;
+    background: var(--off-white);
+    border-radius: 4px;
+    border-top: 4px solid var(--navy);
+  }
+
+  .team-name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 0.3rem;
+  }
+
+  .team-role {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+
+  .team-bio {
+    font-size: 0.9rem;
+    color: var(--text-body);
+    line-height: 1.8;
+  }
+
+  .company-block {
+    margin-top: 3rem;
+    padding: 2.5rem;
+    background: var(--navy);
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .company-seal-large {
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+  }
+
+  .company-info-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+  }
+
+  .company-info-body {
+    font-size: 0.9rem;
+    color: var(--blue-light);
+    line-height: 1.7;
+  }
+
+  .company-facts {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .company-fact strong {
+    display: block;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: var(--gray-med);
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+
+  .company-fact span {
+    font-size: 0.9rem;
+    color: var(--blue-light);
+  }
+
+  /* ── VISION ── */
+  .vision {
+    background: var(--off-white);
+  }
+
+  .vision-statement {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .vision-quote {
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    color: var(--navy);
+    font-style: italic;
+    line-height: 1.7;
+    padding: 2.5rem 3rem;
+    border: 1px solid var(--blue-light);
+    border-radius: 4px;
+    background: var(--white);
+    position: relative;
+    margin: 2rem 0;
+  }
+
+  .ecosystem-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .ecosystem-item {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    background: var(--white);
+    border-radius: 4px;
+    border: 1px solid var(--blue-light);
+  }
+
+  .ecosystem-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .ecosystem-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+  }
+
+  .ecosystem-body {
+    font-size: 0.85rem;
+    color: var(--text-body);
+    line-height: 1.6;
+  }
+
+  /* ── CONTACT ── */
+  .contact {
+    background: var(--navy-dark);
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .contact-info {}
+
+  .contact-info p {
+    font-size: 0.95rem;
+    color: var(--blue-light);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+  }
+
+  .contact-detail {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: var(--blue-light);
+  }
+
+  .contact-detail strong {
+    color: var(--white);
+    display: block;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+
+  .contact-form {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+    padding: 2.5rem;
+  }
+
+  .form-group {
+    margin-bottom: 1.25rem;
+  }
+
+  .form-label {
+    display: block;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: var(--blue-light);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+
+  .form-input,
+  .form-select,
+  .form-textarea {
+    width: 100%;
+    padding: 10px 14px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid var(--accent);
+    border-radius: 3px;
+    color: var(--white);
+    font-family: Georgia, serif;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .form-input:focus,
+  .form-select:focus,
+  .form-textarea:focus {
+    border-color: var(--blue-mid);
+  }
+
+  .form-select option {
+    background: var(--navy-dark);
+    color: var(--white);
+  }
+
+  .form-textarea {
+    height: 120px;
+    resize: vertical;
+  }
+
+  .form-submit {
+    width: 100%;
+    padding: 14px;
+    background: var(--accent);
+    color: var(--white);
+    border: none;
+    border-radius: 3px;
+    font-family: Georgia, serif;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 0.5rem;
+  }
+
+  .form-submit:hover { background: var(--blue-mid); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #080f1e;
+    padding: 3rem 2rem;
+    text-align: center;
+    border-top: 1px solid var(--navy);
+  }
+
+  .footer-seal {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1.5rem;
+    display: block;
+  }
+
+  .footer-name {
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+    color: var(--blue-light);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-patents {
+    font-size: 0.8rem;
+    color: var(--gray-med);
+    margin-bottom: 1rem;
+  }
+
+  .footer-copy {
+    font-size: 0.75rem;
+    color: #3a4a6a;
+  }
+
+  /* ── MOBILE ── */
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .compare-grid { grid-template-columns: 1fr; }
+    .patents-grid { grid-template-columns: 1fr; }
+    .team-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .company-block { grid-template-columns: 1fr; text-align: center; }
+    .layer { grid-template-columns: 60px 1fr; }
+    .layer-status { display: none; }
+    .hero-btns { flex-direction: column; align-items: center; }
+  }
+
+  /* ── SCROLL ANIMATIONS ── */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<!-- ── NAVIGATION ── -->
+<nav>
+  <a href="#" class="nav-brand">
+    <svg class="nav-seal" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="100" cy="100" r="95" fill="#1a3a6b" stroke="#4a7cc7" stroke-width="4"/>
+      <circle cx="100" cy="100" r="78" fill="none" stroke="#4a7cc7" stroke-width="1" opacity="0.4"/>
+      <text x="100" y="88" font-family="Georgia,serif" font-size="46" font-weight="700" fill="#e8f1f8" text-anchor="middle" dominant-baseline="middle">CLS</text>
+      <line x1="55" y1="102" x2="145" y2="102" stroke="#4a7cc7" stroke-width="1" opacity="0.6"/>
+      <text x="100" y="118" font-family="Georgia,serif" font-size="11" fill="#7aaad4" text-anchor="middle">EST. 2016</text>
+      <path id="nc" d="M100,100 m-70,0 a70,70 0 1,1 140,0"/>
+      <path id="bc" d="M100,100 m-58,0 a58,58 0 0,0 116,0"/>
+      <text font-family="Georgia,serif" font-size="9" fill="#a8c4e8" letter-spacing="2">
+        <textPath href="#nc" startOffset="50%" text-anchor="middle">COMPLETE · LOAD · SOLUTIONS · LLC</textPath>
+      </text>
+      <text font-family="Georgia,serif" font-size="8" fill="#7aaad4" letter-spacing="2">
+        <textPath href="#bc" startOffset="50%" text-anchor="middle">VERIFIED · CERTIFIED · TRUSTED</textPath>
+      </text>
+    </svg>
+    <span class="nav-name">Complete Load Solutions</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#problem">The Problem</a></li>
+    <li><a href="#stack">The Stack</a></li>
+    <li><a href="#solution">The Solution</a></li>
+    <li><a href="#patents">Patents</a></li>
+    <li><a href="#team">Team</a></li>
+    <li><a href="#contact" class="nav-cta">Connect</a></li>
+  </ul>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero" id="top">
+  <div class="hero-content">
+    <svg class="hero-seal" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="100" cy="100" r="95" fill="#1a3a6b" stroke="#4a7cc7" stroke-width="4"/>
+      <circle cx="100" cy="100" r="82" fill="none" stroke="#4a7cc7" stroke-width="1.5" opacity="0.5"/>
+      <circle cx="100" cy="100" r="68" fill="none" stroke="#4a7cc7" stroke-width="0.75" opacity="0.25"/>
+      <text x="100" y="92" font-family="Georgia,serif" font-size="52" font-weight="700" fill="#e8f1f8" text-anchor="middle" dominant-baseline="middle">CLS</text>
+      <line x1="50" y1="108" x2="150" y2="108" stroke="#4a7cc7" stroke-width="1" opacity="0.6"/>
+      <text x="100" y="126" font-family="Georgia,serif" font-size="12" fill="#7aaad4" text-anchor="middle">EST. 2016</text>
+      <path id="nt" d="M100,100 m-80,0 a80,80 0 1,1 160,0"/>
+      <path id="nb" d="M100,100 m-65,0 a65,65 0 0,0 130,0"/>
+      <text font-family="Georgia,serif" font-size="9.5" fill="#a8c4e8" letter-spacing="3">
+        <textPath href="#nt" startOffset="50%" text-anchor="middle">COMPLETE · LOAD · SOLUTIONS · LLC</textPath>
+      </text>
+      <text font-family="Georgia,serif" font-size="8.5" fill="#7aaad4" letter-spacing="3">
+        <textPath href="#nb" startOffset="50%" text-anchor="middle">VERIFIED · CERTIFIED · TRUSTED</textPath>
+      </text>
+    </svg>
+
+    <p class="hero-eyebrow">Complete Load Solutions LLC &nbsp;·&nbsp; Est. 2016</p>
+
+    <h1 class="hero-title">
+      The Industry Built Everything<br>
+      <span>Except the Foundation</span>
+    </h1>
+
+    <p class="hero-subtitle">
+      The construction materials industry has invested hundreds of millions of dollars in digital infrastructure. All of it operates on one unverified assumption.
+    </p>
+
+    <div class="hero-divider"></div>
+
+    <p class="hero-statement">
+      Every load dispatched. Every batch authorized. Every ticket generated. Every AI recommendation. Every EPD filed.<br><br>
+      All of it assumes the truck receiving the load is the truck that was authorized for that load.<br><br>
+      Nobody verifies this. There are no digital stop gaps. There are no enforcement gates.<br><br>
+      <strong style="color:#fff;">We hold the US patents that define the solution.</strong>
+    </p>
+
+    <div class="hero-btns">
+      <a href="#stack" class="btn-primary">See the Missing Layer</a>
+      <a href="#contact" class="btn-secondary">Connect With Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── THE ASSUMPTION ── -->
+<section class="assumption" id="problem">
+  <div class="container">
+    <div class="assumption-box fade-in">
+      <p class="section-eyebrow" style="color:var(--blue-mid);text-align:center;">The Core Problem</p>
+      <h2 class="section-title light" style="text-align:center;">One Unverified Assumption<br>Underlies Everything</h2>
+      <div class="assumption-quote">
+        "That the truck receiving the load at the plant is the truck that was authorized for that load."
+      </div>
+      <p class="assumption-sub">
+        Today, truck sequencing at batch plants is managed manually by plant personnel. If a truck loads out of sequence — intentionally or unintentionally — there are <strong style="color:var(--white);">no active digital verification methods</strong> at the plant to confirm a match. No stop gap prevents the wrong truck from receiving the wrong batch. Once loading begins, the batching process proceeds without independent confirmation of truck identity against the active load assignment.
+      </p>
+      <p class="assumption-sub" style="margin-top:1rem;">
+        Electronic ticketing systems assume correct physical execution rather than independently verifying it. Batch weights may be correctly generated but associated with the wrong truck. In some cases, where batch weights are not required, the process proceeds with <strong style="color:var(--white);">no quantitative verification whatsoever</strong> — relying entirely on blind assumption.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHAT THE INDUSTRY BUILT ── -->
+<section style="background:var(--white);padding:80px 2rem;" id="ecosystem">
+  <div class="container">
+    <p class="section-eyebrow fade-in">The Ecosystem</p>
+    <h2 class="section-title fade-in">The Industry Has Built Something Remarkable</h2>
+    <div class="section-divider fade-in"></div>
+    <p class="section-lead fade-in">
+      Over the past decade, construction materials technology has advanced dramatically. Dispatch platforms, AI optimization, real-time sensor networks, and compliance reporting tools have transformed how producers operate. The companies building these systems are genuine innovators.
+    </p>
+
+    <div class="cards-grid fade-in">
+      <div class="card">
+        <div class="card-num">01</div>
+        <div class="card-title">Dispatch &amp; Batch Platforms</div>
+        <div class="card-body">Command Alkon, Sysdyne, Jonel, and XBE/BCMI connect dispatch, batch, logistics, and financials on unified cloud platforms serving producers globally. Load authorization, ticket generation, and fleet management — digitized and streamlined.</div>
+        <span class="card-tag">Layer 1 of the stack</span>
+      </div>
+      <div class="card">
+        <div class="card-num">02</div>
+        <div class="card-title">AI &amp; Mix Optimization</div>
+        <div class="card-body">Batch AI systems and mix design intelligence adapt in real time to conditions, reducing waste, improving consistency, and optimizing material usage. Predictive analytics are reshaping how producers make decisions.</div>
+        <span class="card-tag">Dependent on verified inputs</span>
+      </div>
+      <div class="card">
+        <div class="card-num">03</div>
+        <div class="card-title">In-Transit Intelligence</div>
+        <div class="card-body">Verifi, Smart Hatch, Giatec, and AiCrete deploy drum sensors, telematics, and AI to monitor slump, temperature, air content, strength maturity, and drum activity in real time from plant to jobsite.</div>
+        <span class="card-tag">Layer 3 of the stack</span>
+      </div>
+      <div class="card">
+        <div class="card-num">04</div>
+        <div class="card-title">Compliance &amp; Reporting</div>
+        <div class="card-body">Environmental Product Declarations, Climate Earth, sustainability reporting platforms, and QA documentation systems now capture and communicate materials data for regulatory, environmental, and audit purposes.</div>
+        <span class="card-tag">Accuracy depends on Layer 2</span>
+      </div>
+    </div>
+
+    <div class="insight-box fade-in" style="margin-top:3rem;">
+      <h3>The Hidden Problem Across All Four</h3>
+      <p>Every one of these systems — from dispatch to AI to sensors to EPDs — inherits the same unverified assumption at the point of loading. They record what should have happened. They measure what happens in transit. They report what was submitted. None of them verify that the physical load event matched the authorized digital record.</p>
+      <p>The companies building these systems know this. They don't advertise it. But the gap is real, it is structural, and it sits between Layer 1 and Layer 3 of the industry stack.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── THE STACK ── -->
+<section class="stack" id="stack">
+  <div class="container">
+    <p class="section-eyebrow fade-in">The Industry Stack</p>
+    <h2 class="section-title fade-in">Where the Gap Lives</h2>
+    <div class="section-divider fade-in"></div>
+    <p class="section-lead fade-in">
+      The construction materials technology stack has four distinct layers. Three of them exist and are actively developed. One of them — the most foundational — does not exist anywhere in the industry today.
+    </p>
+
+    <div class="stack-layers fade-in">
+
+      <div class="layer">
+        <div class="layer-num">
+          <div class="layer-num-label">Layer</div>
+          <div class="layer-num-val">4</div>
+        </div>
+        <div class="layer-info">
+          <div class="layer-title">Reporting &amp; Compliance</div>
+          <div class="layer-platforms">EPD Systems · Climate Earth · Sustainability Reporting · QA Documentation</div>
+          <div class="layer-desc">Environmental product declarations, carbon reporting, chain-of-custody documentation, and audit records. Accuracy of all reported data depends entirely on verified physical load events — which are currently unverified.</div>
+        </div>
+        <div class="layer-status">
+          <span class="status-badge status-exists">Exists</span>
+        </div>
+      </div>
+
+      <div class="layer">
+        <div class="layer-num">
+          <div class="layer-num-label">Layer</div>
+          <div class="layer-num-val">3</div>
+        </div>
+        <div class="layer-info">
+          <div class="layer-title">In-Transit &amp; Jobsite Intelligence</div>
+          <div class="layer-platforms">Verifi · Smart Hatch · Giatec · AiCrete · Others</div>
+          <div class="layer-desc">AI monitoring of slump, temperature, air content, strength maturity, drum activity, and jobsite delivery data. Every data point and AI recommendation inherits the unverified assumption from Layer 1. Without Layer 2, this is precision built on assumption.</div>
+        </div>
+        <div class="layer-status">
+          <span class="status-badge status-exists">Exists</span>
+        </div>
+      </div>
+
+      <div class="layer missing">
+        <div class="layer-num">
+          <div class="layer-num-label" style="color:var(--blue-light);">Layer</div>
+          <div class="layer-num-val" style="color:var(--white);font-size:3rem;">2</div>
+        </div>
+        <div class="layer-info">
+          <div class="layer-title" style="color:var(--white);font-size:1.2rem;">⚠ LOAD VERIFICATION — THE MISSING LAYER</div>
+          <div class="layer-platforms" style="color:var(--blue-mid);font-weight:700;">Complete Load Solutions · US Patent 10,417,610</div>
+          <div class="layer-desc" style="color:var(--blue-pale);">Independent digital confirmation that the authorized truck physically received the authorized load before any material was discharged — with a certified, tamper-resistant audit record of every load event. This layer does not exist anywhere in the industry today. We hold the patents that define it.</div>
+        </div>
+        <div class="layer-status">
+          <span class="status-badge status-missing">Missing</span>
+        </div>
+      </div>
+
+      <div class="layer">
+        <div class="layer-num">
+          <div class="layer-num-label">Layer</div>
+          <div class="layer-num-val">1</div>
+        </div>
+        <div class="layer-info">
+          <div class="layer-title">Dispatch &amp; Batch Authorization</div>
+          <div class="layer-platforms">Command Alkon · Sysdyne · Jonel · XBE/BCMI</div>
+          <div class="layer-desc">Load authorization, batch initiation, ticket generation, and dispatch management. Records what should happen. Does not verify that the authorized physical event occurred at the discharge point.</div>
+        </div>
+        <div class="layer-status">
+          <span class="status-badge status-exists">Exists</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="stack-insight fade-in">
+      <strong>Layer 2 does not compete with Layer 3. It makes Layer 3 credible.</strong><br><br>
+      When Load Verification exists, every Verifi sensor reading becomes trustworthy. Every Giatec AI recommendation becomes defensible. Every AiCrete output becomes auditable. Every EPD becomes credible. The missing layer does not replace what the industry has built — it validates it.
+    </div>
+  </div>
+</section>
+
+<!-- ── THE DISCHARGE POINT ── -->
+<section class="discharge" id="solution">
+  <div class="container">
+    <p class="section-eyebrow fade-in" style="color:var(--blue-mid);">The Discharge Point</p>
+    <h2 class="section-title light fade-in">Where Assumptions Become Risk</h2>
+    <div class="section-divider fade-in"></div>
+    <p class="section-lead light fade-in">
+      The discharge point is where the most consequential errors in ready-mix operations occur — and where nothing is currently verified. It is the architectural gap that the entire industry is built on top of.
+    </p>
+
+    <div class="compare-grid fade-in">
+      <div class="compare-col today">
+        <div class="compare-heading">Today — No Verification</div>
+        <div class="compare-item"><div class="compare-dot dot-red"></div>Dispatcher assigns a load to a specific truck digitally</div>
+        <div class="compare-item"><div class="compare-dot dot-red"></div>Batch operator sequences trucks manually at the plant</div>
+        <div class="compare-item"><div class="compare-dot dot-red"></div>No system checks which truck is physically present at discharge</div>
+        <div class="compare-item"><div class="compare-dot dot-red"></div>Loading proceeds — correct or incorrect — without detection</div>
+        <div class="compare-item"><div class="compare-dot dot-red"></div>Ticket is generated based on system data, not physical reality</div>
+        <div class="compare-item"><div class="compare-dot dot-red"></div>Wrong truck, wrong load, wrong job — potentially undetected</div>
+        <div class="compare-item"><div class="compare-dot dot-red"></div>No certified audit record of the physical load event exists</div>
+        <div class="compare-item"><div class="compare-dot dot-red"></div>EPD data, AI recommendations, and QA records built on assumption</div>
+      </div>
+
+      <div class="compare-col verified">
+        <div class="compare-heading">With Load Verification</div>
+        <div class="compare-item"><div class="compare-dot dot-green"></div>Truck identifier read digitally at the discharge point</div>
+        <div class="compare-item"><div class="compare-dot dot-green"></div>System compares identifier against active authorized load assignment</div>
+        <div class="compare-item"><div class="compare-dot dot-green"></div>Match confirmed — discharge authorized automatically</div>
+        <div class="compare-item"><div class="compare-dot dot-green"></div>Mismatch detected — discharge blocked before material flows</div>
+        <div class="compare-item"><div class="compare-dot dot-green"></div>Certified load record generated with timestamped evidence</div>
+        <div class="compare-item"><div class="compare-dot dot-green"></div>Non-certified loads flagged and documented for review</div>
+        <div class="compare-item"><div class="compare-dot dot-green"></div>Complete tamper-resistant audit trail for every load event</div>
+        <div class="compare-item"><div class="compare-dot dot-green"></div>Physical reality matches digital record — provably</div>
+      </div>
+    </div>
+
+    <div class="patent-badge fade-in">
+      <strong>Covered by US Patent 10,417,610 · System and Method for Verifying a Load Placed in One or More Trucks · Active and Enforceable Through 2037</strong>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHY NOW ── -->
+<section class="why-now" id="whynow">
+  <div class="container">
+    <p class="section-eyebrow fade-in">Timing</p>
+    <h2 class="section-title fade-in">Why This Matters More<br>as Automation Scales</h2>
+    <div class="section-divider fade-in"></div>
+    <p class="section-lead fade-in">
+      The verification gap has always existed. As automation, remote operations, and AI-driven decision making expand across the industry, the consequences of that gap grow more significant — not less.
+    </p>
+
+    <div class="reasons-grid fade-in">
+      <div class="reason-card">
+        <div class="reason-num">01</div>
+        <div class="reason-title">Remote Batching Removes Human Oversight</div>
+        <div class="reason-body">As batching authority moves beyond the batch house and across plant networks, operators managing multiple plants from a single screen cannot physically observe the discharge point at each location. The gap between digital command and physical reality widens. An automated system must close it.</div>
+      </div>
+      <div class="reason-card">
+        <div class="reason-num">02</div>
+        <div class="reason-title">AI Recommendations Require Trustworthy Inputs</div>
+        <div class="reason-body">Batch AI, mix optimization, and predictive analytics are only as accurate as the data they consume. When AI systems begin influencing real material decisions — adjusting mix designs, optimizing costs, predicting strength — the integrity of the underlying load event becomes foundational. Unverified load data propagates errors through every downstream system.</div>
+      </div>
+      <div class="reason-card">
+        <div class="reason-num">03</div>
+        <div class="reason-title">Compliance Demands Are Tightening</div>
+        <div class="reason-body">Environmental Product Declarations, chain-of-custody documentation, audit defensibility, and digital record integrity requirements are increasing across public and private projects. DOT agencies, project owners, and sustainability reporting frameworks are moving toward digital verification standards. The industry needs verified load data as the foundation.</div>
+      </div>
+      <div class="reason-card">
+        <div class="reason-num">04</div>
+        <div class="reason-title">E-Ticketing Creates New Accountability</div>
+        <div class="reason-body">As electronic ticketing becomes standard — with state agencies and DOTs increasingly requiring digital ticket systems for project compliance — the question of whether those tickets accurately reflect verified physical events becomes unavoidable. E-tickets that assume correct execution are not the same as e-tickets that verify it.</div>
+      </div>
+      <div class="reason-card">
+        <div class="reason-num">05</div>
+        <div class="reason-title">The Ecosystem Is Converging</div>
+        <div class="reason-body">Platform providers, sensor manufacturers, EPD systems, and digital ticketing infrastructure are all building toward the same connected supply chain. As they converge, the missing verification layer becomes the foundational piece that makes every other component trustworthy. The industry is ready for this layer to exist.</div>
+      </div>
+      <div class="reason-card">
+        <div class="reason-num">06</div>
+        <div class="reason-title">The Patents Are in Place</div>
+        <div class="reason-body">Complete Load Solutions holds two issued US patents — US 10,417,610 and US 10,330,520 — both active and enforceable through 2037. The intellectual property that defines the verification layer is established, documented, and available for licensing and commercialization now.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── LAYER 3 PROBLEM ── -->
+<section class="layer3" id="layer3">
+  <div class="container">
+    <p class="section-eyebrow fade-in">The Credibility Problem</p>
+    <h2 class="section-title fade-in">Precision Built on Assumption</h2>
+    <div class="section-divider fade-in"></div>
+    <p class="section-lead fade-in">
+      The companies in Layer 3 — in-transit intelligence, AI optimization, and compliance reporting — are building genuinely sophisticated technology. But every one of them inherits the unverified assumption from the discharge point.
+    </p>
+
+    <div class="companies-grid fade-in">
+      <div class="company-pill">
+        Verifi
+        <div class="company-pill-sub">Real-time slump, temperature, drum monitoring</div>
+      </div>
+      <div class="company-pill">
+        Giatec
+        <div class="company-pill-sub">AI mix optimization · SmartMix · MixPilot</div>
+      </div>
+      <div class="company-pill">
+        AiCrete
+        <div class="company-pill-sub">Mix design intelligence · Predictive analytics</div>
+      </div>
+      <div class="company-pill">
+        Smart Hatch
+        <div class="company-pill-sub">Jobsite delivery analytics · Drum data</div>
+      </div>
+      <div class="company-pill">
+        Climate Earth
+        <div class="company-pill-sub">EPD generation · Carbon reporting</div>
+      </div>
+      <div class="company-pill">
+        HaulHub
+        <div class="company-pill-sub">E-ticketing · DOT ticket depository</div>
+      </div>
+    </div>
+
+    <div class="insight-box fade-in">
+      <h3>What Each of These Companies Cannot Tell You</h3>
+      <p>Verifi tells producers their Pulse system means "you always know" what is happening with your concrete. Their sensors measure slump, temperature, and drum activity with genuine precision. But Verifi cannot tell you that the material in that drum is what the ticket says it is. They inherited that assumption from the plant without verification.</p>
+      <p>Giatec's SmartMix delivers AI-assisted mix optimization and real-time quality control. Their technology is sophisticated and valuable. But Giatec cannot verify that the mix being optimized is the mix that was authorized for that truck and that job. Their AI recommendations are only as accurate as the assumption they inherited.</p>
+      <p>Climate Earth generates Environmental Product Declarations that producers rely on for regulatory compliance and sustainability reporting. But EPDs are only as credible as the production data beneath them — and that production data is currently unverified at the physical load event.</p>
+      <p><strong style="color:var(--white);">Load Verification does not compete with these companies. It makes them credible. When Layer 2 exists, every sensor reading, every AI recommendation, and every EPD becomes defensible because the physical load event that generated the data was verified before it happened.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- ── PATENTS ── -->
+<section class="patents" id="patents">
+  <div class="container">
+    <p class="section-eyebrow fade-in" style="color:var(--blue-mid);">Intellectual Property</p>
+    <h2 class="section-title light fade-in">Two Issued US Patents</h2>
+    <div class="section-divider fade-in"></div>
+    <p class="section-lead light fade-in">
+      Complete Load Solutions holds two active and enforceable United States patents covering the verification and automation layer that the industry is missing. Both patents are issued, both are enforceable, and both are active through 2037.
+    </p>
+
+    <div class="patents-grid fade-in">
+      <div class="patent-card">
+        <div class="patent-number">US Patent 10,417,610</div>
+        <div class="patent-title">Load Verification</div>
+        <div class="patent-body">
+          Covers the system and method for verifying that the correct truck receives the correct authorized load at the discharge point before any material is discharged. The system reads a unique identifier affixed to the truck, compares it against the active load assignment in the dispatch database, and either authorizes discharge if the identifiers match or blocks discharge if they do not.<br><br>
+          When a match is confirmed, the load is marked as certified and a tamper-resistant audit record is generated with timestamped evidence. When a mismatch is detected, the operator is presented with options — override with documented non-certified status, or re-scan. If at any point the discharge process is interrupted and resumed, the verification sequence resets before material flow continues.<br><br>
+          This is the foundational verification layer that does not exist anywhere in the industry today.
+        </div>
+        <div class="patent-meta">
+          <div class="patent-meta-item">
+            <strong>Status</strong>
+            Active &amp; Enforceable
+          </div>
+          <div class="patent-meta-item">
+            <strong>Expiration</strong>
+            2037
+          </div>
+          <div class="patent-meta-item">
+            <strong>Coverage</strong>
+            United States
+          </div>
+          <div class="patent-meta-item">
+            <strong>Focus</strong>
+            Discharge Verification
+          </div>
+        </div>
+      </div>
+
+      <div class="patent-card">
+        <div class="patent-number">US Patent 10,330,520</div>
+        <div class="patent-title">Plant Automation</div>
+        <div class="patent-body">
+          Covers the system for automatically initializing the weighing and batching process when the correct truck is identified in the staging area — matching truck identity against the active load assignment before batching begins, without requiring manual operator intervention.<br><br>
+          When a truck arrives at the staging area and its unique identifier is read and matched against the load queue, the system automatically authorizes and initiates the weight-up process for that specific load. If no match is found, the weigh-up is blocked and the operator is alerted.<br><br>
+          This patent addresses the plant automation layer — removing manual sequencing errors, enabling fully automated and remotely operated plant environments, and completing the verification architecture from staging through discharge.
+        </div>
+        <div class="patent-meta">
+          <div class="patent-meta-item">
+            <strong>Status</strong>
+            Active &amp; Enforceable
+          </div>
+          <div class="patent-meta-item">
+            <strong>Expiration</strong>
+            2037
+          </div>
+          <div class="patent-meta-item">
+            <strong>Coverage</strong>
+            United States
+          </div>
+          <div class="patent-meta-item">
+            <strong>Focus</strong>
+            Staging Automation
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:2.5rem;padding:2rem;background:rgba(74,124,199,0.1);border:1px solid var(--accent);border-radius:4px;text-align:center;" class="fade-in">
+      <p style="color:var(--blue-light);font-size:0.95rem;line-height:1.8;">
+        Together these two patents cover the complete verification architecture — from truck arrival at the staging area through authorized discharge at the load point. They represent eleven years of remaining protection on technology the industry is actively building toward.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ── TEAM ── -->
+<section class="team" id="team">
+  <div class="container">
+    <p class="section-eyebrow fade-in">The Team</p>
+    <h2 class="section-title fade-in">Built By Operators Who Lived the Problem</h2>
+    <div class="section-divider fade-in"></div>
+    <p class="section-lead fade-in">
+      Complete Load Solutions was not founded by software engineers who identified a market opportunity. It was founded by ready-mix operators who experienced the verification gap firsthand — every day, across multiple plants, in real production environments.
+    </p>
+
+    <div class="team-grid fade-in">
+      <div class="team-member">
+        <div class="team-name">Brent Pommerening</div>
+        <div class="team-role">Co-Founder &amp; Principal · 65% Partner</div>
+        <div class="team-bio">
+          Brent brings over 30 years of ready-mix concrete operations experience to Complete Load Solutions. He currently serves as the primary dispatch operator for a nine-plant, 80-truck ready-mix operation in the greater Chicago area — managing scheduling, logistics, plant sequencing, driver coordination, and customer relations daily across one of the most operationally complex environments in the industry.<br><br>
+          His operational depth spans plant management, dispatch systems, batch operations, DOT compliance, and the full plant-to-pour workflow. He has seen firsthand how load verification gaps create errors, disputes, and operational risk — and spent nearly a decade developing and patenting the solution.<br><br>
+          Brent is also a member of the Agent XBE external industry advisory group and holds a deep network across the ready-mix, aggregates, and construction materials technology ecosystem including relationships with NRMCA, Command Alkon, XBE/BCMI, and independent producers across the United States.
+        </div>
+      </div>
+
+      <div class="team-member">
+        <div class="team-name">Patrick Dunbar</div>
+        <div class="team-role">Co-Founder &amp; Principal · 35% Partner</div>
+        <div class="team-bio">
+          Patrick Dunbar is co-inventor of both US patents held by Complete Load Solutions and serves as the strategic and commercial partner of the firm. His background spans patent development, commercialization strategy, and industry application across ready-mix and construction materials markets.<br><br>
+          Patrick brings the strategic framework and long-term commercial vision to Complete Load Solutions — evaluating partnership structures, licensing opportunities, and platform relationships while maintaining discipline around IP ownership and optionality.<br><br>
+          Together, Brent and Patrick represent a unique combination of deep operational expertise and strategic commercial thinking — the operational reality that the patents were built to solve, and the strategic discipline required to commercialize them correctly.
+        </div>
+      </div>
+    </div>
+
+    <div class="company-block fade-in">
+      <svg class="company-seal-large" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="100" cy="100" r="95" fill="#1a3a6b" stroke="#4a7cc7" stroke-width="4"/>
+        <circle cx="100" cy="100" r="78" fill="none" stroke="#4a7cc7" stroke-width="1" opacity="0.4"/>
+        <text x="100" y="88" font-family="Georgia,serif" font-size="46" font-weight="700" fill="#e8f1f8" text-anchor="middle" dominant-baseline="middle">CLS</text>
+        <line x1="55" y1="102" x2="145" y2="102" stroke="#4a7cc7" stroke-width="1" opacity="0.6"/>
+        <text x="100" y="118" font-family="Georgia,serif" font-size="11" fill="#7aaad4" text-anchor="middle">EST. 2016</text>
+        <path id="nc2" d="M100,100 m-70,0 a70,70 0 1,1 140,0"/>
+        <path id="bc2" d="M100,100 m-58,0 a58,58 0 0,0 116,0"/>
+        <text font-family="Georgia,serif" font-size="9" fill="#a8c4e8" letter-spacing="2">
+          <textPath href="#nc2" startOffset="50%" text-anchor="middle">COMPLETE · LOAD · SOLUTIONS · LLC</textPath>
+        </text>
+        <text font-family="Georgia,serif" font-size="8" fill="#7aaad4" letter-spacing="2">
+          <textPath href="#bc2" startOffset="50%" text-anchor="middle">VERIFIED · CERTIFIED · TRUSTED</textPath>
+        </text>
+      </svg>
+      <div>
+        <div class="company-info-title">Complete Load Solutions LLC</div>
+        <div class="company-info-body">
+          Founded in 2016 by Brent Pommerening and Patrick Dunbar, Complete Load Solutions LLC is the patent holder and developer of the authoritative load verification layer for the construction materials industry. The company holds two issued US patents — US 10,417,610 and US 10,330,520 — both active and enforceable through 2037. Complete Load Solutions is actively pursuing licensing, commercialization, and strategic partnership opportunities with platforms, producers, and compliance-driven organizations across the construction materials ecosystem.
+        </div>
+        <div class="company-facts">
+          <div class="company-fact">
+            <strong>Founded</strong>
+            <span>2016</span>
+          </div>
+          <div class="company-fact">
+            <strong>Headquarters</strong>
+            <span>Illinois, USA</span>
+          </div>
+          <div class="company-fact">
+            <strong>Patents Held</strong>
+            <span>2 Issued US Patents</span>
+          </div>
+          <div class="company-fact">
+            <strong>Patent Expiration</strong>
+            <span>2037</span>
+          </div>
+          <div class="company-fact">
+            <strong>Focus</strong>
+            <span>Load Verification · Plant Automation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── VISION ── -->
+<section class="vision" id="vision">
+  <div class="container">
+    <p class="section-eyebrow fade-in" style="text-align:center;">The Vision</p>
+    <h2 class="section-title fade-in" style="text-align:center;">A Verified Foundation<br>for the Entire Industry</h2>
+    <div class="section-divider fade-in" style="margin:0 auto 2rem;"></div>
+
+    <div class="vision-statement fade-in">
+      <div class="vision-quote">
+        "The construction materials industry has invested hundreds of millions of dollars in digital infrastructure. All of it operates on one unverified assumption. Complete Load Solutions holds the patents that define the missing verification layer — the foundational control system that confirms physical reality matches digital intent before any material flows. When this layer exists, every technology in the stack becomes credible."
+      </div>
+    </div>
+
+    <div class="ecosystem-grid fade-in">
+      <div class="ecosystem-item">
+        <div class="ecosystem-icon">🏭</div>
+        <div class="ecosystem-title">Platform Providers</div>
+        <div class="ecosystem-body">Command Alkon, XBE/BCMI, Sysdyne, and others can complete their chain-of-custody architecture and own the verification standard for the markets they serve.</div>
+      </div>
+      <div class="ecosystem-item">
+        <div class="ecosystem-icon">📡</div>
+        <div class="ecosystem-title">Sensor &amp; AI Companies</div>
+        <div class="ecosystem-body">Verifi, Giatec, AiCrete, Smart Hatch, and others gain a verified foundation beneath their data — making their precision defensible and their recommendations trustworthy.</div>
+      </div>
+      <div class="ecosystem-item">
+        <div class="ecosystem-icon">📋</div>
+        <div class="ecosystem-title">Compliance &amp; EPD</div>
+        <div class="ecosystem-body">Climate Earth, EPD platforms, and sustainability reporting systems gain verified load data as the input layer — making carbon reporting and chain-of-custody documentation credible.</div>
+      </div>
+      <div class="ecosystem-item">
+        <div class="ecosystem-icon">🏛</div>
+        <div class="ecosystem-title">DOTs &amp; Regulators</div>
+        <div class="ecosystem-body">State DOTs, infrastructure owners, and audit bodies gain the authoritative verification layer that makes digital records defensible — not just documented but proven.</div>
+      </div>
+      <div class="ecosystem-item">
+        <div class="ecosystem-icon">🏗</div>
+        <div class="ecosystem-title">Producers</div>
+        <div class="ecosystem-body">Ready-mix producers gain certified load records, eliminated misloads, reduced dispute exposure, and audit-defensible documentation for every truck, every plant, every day.</div>
+      </div>
+      <div class="ecosystem-item">
+        <div class="ecosystem-icon">🌐</div>
+        <div class="ecosystem-title">The Global Standard</div>
+        <div class="ecosystem-body">While our patents are US-based, the verification framework we define establishes the global standard for authoritative load verification in construction materials delivery.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info fade-in">
+        <p class="section-eyebrow" style="color:var(--blue-mid);">Connect</p>
+        <h2 class="section-title light">Let's Talk</h2>
+        <div class="section-divider"></div>
+        <p>
+          Whether you are a platform provider, sensor company, EPD organization, producer, DOT agency, or industry association — we welcome the conversation. The verification layer belongs in the industry. We are actively pursuing licensing, commercialization, and strategic partnership opportunities.
+        </p>
+        <p>
+          If you are in the construction materials space and care about data integrity, chain of custody, audit defensibility, or the accuracy of digital records — this conversation is relevant to you.
+        </p>
+
+        <div class="contact-detail">
+          <strong>Company</strong>
+          Complete Load Solutions LLC
+        </div>
+        <div class="contact-detail">
+          <strong>Founders</strong>
+          Brent Pommerening &amp; Patrick Dunbar
+        </div>
+        <div class="contact-detail">
+          <strong>Location</strong>
+          Illinois, United States
+        </div>
+        <div class="contact-detail">
+          <strong>Patents</strong>
+          US 10,417,610 · US 10,330,520
+        </div>
+        <div class="contact-detail">
+          <strong>Email</strong>
+          brpommerening@gmail.com
+        </div>
+
+        <div style="margin-top:2rem;padding:1.5rem;background:rgba(74,124,199,0.1);border:1px solid var(--accent);border-radius:4px;">
+          <p style="color:var(--blue-light);font-size:0.85rem;line-height:1.7;margin:0;">
+            <strong style="color:var(--white);">For licensing inquiries, partnership discussions, or pilot program interest</strong> — please use the form or reach out directly. We respond to all serious inquiries promptly.
+          </p>
+        </div>
+      </div>
+
+      <div class="contact-form fade-in">
+        <form action="https://formspree.io/f/xpwzgkjb" method="POST">
+          <div class="form-group">
+            <label class="form-label">Your Name</label>
+            <input type="text" name="name" class="form-input" placeholder="Full name" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Company</label>
+            <input type="text" name="company" class="form-input" placeholder="Organization name" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email Address</label>
+            <input type="email" name="email" class="form-input" placeholder="your@email.com" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Your Role</label>
+            <select name="role" class="form-select">
+              <option value="">Select your area</option>
+              <option>Platform Provider / Software</option>
+              <option>Ready-Mix Producer</option>
+              <option>Sensor / Telematics Company</option>
+              <option>EPD / Compliance Organization</option>
+              <option>DOT / Government Agency</option>
+              <option>Industry Association</option>
+              <option>Investor / PE / VC</option>
+              <option>Legal / Patent</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Message</label>
+            <textarea name="message" class="form-textarea" placeholder="Tell us about your interest or inquiry..."></textarea>
+          </div>
+          <input type="hidden" name="_subject" value="CLS Website Inquiry">
+          <button type="submit" class="form-submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <svg class="footer-seal" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="100" cy="100" r="95" fill="#1a3a6b" stroke="#4a7cc7" stroke-width="3"/>
+    <text x="100" y="88" font-family="Georgia,serif" font-size="46" font-weight="700" fill="#e8f1f8" text-anchor="middle" dominant-baseline="middle">CLS</text>
+    <line x1="55" y1="102" x2="145" y2="102" stroke="#4a7cc7" stroke-width="1" opacity="0.6"/>
+    <text x="100" y="118" font-family="Georgia,serif" font-size="11" fill="#7aaad4" text-anchor="middle">EST. 2016</text>
+    <path id="nf" d="M100,100 m-70,0 a70,70 0 1,1 140,0"/>
+    <text font-family="Georgia,serif" font-size="8.5" fill="#a8c4e8" letter-spacing="2">
+      <textPath href="#nf" startOffset="50%" text-anchor="middle">COMPLETE · LOAD · SOLUTIONS · LLC</textPath>
+    </text>
+  </svg>
+  <div class="footer-name">Complete Load Solutions LLC</div>
+  <div class="footer-patents">US Patent 10,417,610 · US Patent 10,330,520 · Active through 2037</div>
+  <div class="footer-copy">© 2016–2026 Complete Load Solutions LLC · Brent Pommerening &amp; Patrick Dunbar · All Rights Reserved<br>
+  Patent inquiries and licensing: brpommerening@gmail.com</div>
+</footer>
+
+<script>
+  // Scroll fade-in
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Smooth nav
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -995,6 +995,55 @@
     color: #3a4a6a;
   }
 
+
+  .hero-seal-div {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 2rem;
+    position: relative;
+  }
+
+  .seal-ring {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: #1a3a6b;
+    border: 4px solid #4a7cc7;
+    box-shadow: 0 0 0 2px rgba(74,124,199,0.3), 0 0 0 8px rgba(74,124,199,0.1), inset 0 0 0 12px rgba(74,124,199,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .seal-inner {
+    text-align: center;
+  }
+
+  .seal-cls {
+    font-family: Georgia, serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #e8f1f8;
+    line-height: 1;
+    letter-spacing: 2px;
+  }
+
+  .seal-line {
+    width: 60px;
+    height: 1px;
+    background: #4a7cc7;
+    margin: 4px auto;
+    opacity: 0.7;
+  }
+
+  .seal-est {
+    font-family: Georgia, serif;
+    font-size: 0.65rem;
+    color: #7aaad4;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+
   /* ── MOBILE ── */
   @media (max-width: 768px) {
     .nav-links { display: none; }
@@ -1026,20 +1075,21 @@
 <!-- ── NAVIGATION ── -->
 <nav>
   <a href="#" class="nav-brand">
-    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <svg width="60" height="60" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
   <circle cx="100" cy="100" r="95" fill="#1a3a6b" stroke="#4a7cc7" stroke-width="4"/>
-  <circle cx="100" cy="100" r="82" fill="none" stroke="#4a7cc7" stroke-width="1.5" opacity="0.5"/>
-  <circle cx="100" cy="100" r="68" fill="none" stroke="#4a7cc7" stroke-width="0.75" opacity="0.25"/>
-  <text x="100" y="108" font-family="Arial,sans-serif" font-size="48" font-weight="700" fill="#e8f1f8" text-anchor="middle">CLS</text>
-  <line x1="50" y1="118" x2="150" y2="118" stroke="#4a7cc7" stroke-width="1" opacity="0.6"/>
-  <text x="100" y="134" font-family="Arial,sans-serif" font-size="11" fill="#7aaad4" text-anchor="middle">EST. 2016</text>
-  <path id="s1t" d="M100,100 m-80,0 a80,80 0 1,1 160,0"/>
-  <path id="s1b" d="M100,100 m-65,0 a65,65 0 0,0 130,0"/>
-  <text font-family="Arial,sans-serif" font-size="9" fill="#a8c4e8" letter-spacing="3">
-    <textPath href="#s1t" startOffset="50%" text-anchor="middle">COMPLETE · LOAD · SOLUTIONS · LLC</textPath>
+  <circle cx="100" cy="100" r="78" fill="none" stroke="#4a7cc7" stroke-width="1" opacity="0.4"/>
+  <text x="100" y="115" font-family="Arial,Helvetica,sans-serif" font-size="46" font-weight="700" fill="#e8f1f8" text-anchor="middle">CLS</text>
+  <line x1="55" y1="125" x2="145" y2="125" stroke="#4a7cc7" stroke-width="1" opacity="0.6"/>
+  <text x="100" y="141" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#7aaad4" text-anchor="middle">EST. 2016</text>
+  <defs>
+    <path id="ct0" d="M 26,100 A 74,74 0 1,1 174,100"/>
+    <path id="cb0" d="M 36,100 A 64,64 0 0,0 164,100"/>
+  </defs>
+  <text font-family="Arial,Helvetica,sans-serif" font-size="9" fill="#a8c4e8">
+    <textPath href="#ct0" startOffset="8%">COMPLETE · LOAD · SOLUTIONS · LLC</textPath>
   </text>
-  <text font-family="Arial,sans-serif" font-size="8" fill="#7aaad4" letter-spacing="3">
-    <textPath href="#s1b" startOffset="50%" text-anchor="middle">VERIFIED · CERTIFIED · TRUSTED</textPath>
+  <text font-family="Arial,Helvetica,sans-serif" font-size="8" fill="#7aaad4">
+    <textPath href="#cb0" startOffset="10%">VERIFIED · CERTIFIED · TRUSTED</textPath>
   </text>
 </svg>
     <span class="nav-name">Complete Load Solutions</span>
@@ -1057,20 +1107,21 @@
 <!-- ── HERO ── -->
 <section class="hero" id="top">
   <div class="hero-content">
-    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <svg width="60" height="60" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
   <circle cx="100" cy="100" r="95" fill="#1a3a6b" stroke="#4a7cc7" stroke-width="4"/>
-  <circle cx="100" cy="100" r="82" fill="none" stroke="#4a7cc7" stroke-width="1.5" opacity="0.5"/>
-  <circle cx="100" cy="100" r="68" fill="none" stroke="#4a7cc7" stroke-width="0.75" opacity="0.25"/>
-  <text x="100" y="108" font-family="Arial,sans-serif" font-size="48" font-weight="700" fill="#e8f1f8" text-anchor="middle">CLS</text>
-  <line x1="50" y1="118" x2="150" y2="118" stroke="#4a7cc7" stroke-width="1" opacity="0.6"/>
-  <text x="100" y="134" font-family="Arial,sans-serif" font-size="11" fill="#7aaad4" text-anchor="middle">EST. 2016</text>
-  <path id="s2t" d="M100,100 m-80,0 a80,80 0 1,1 160,0"/>
-  <path id="s2b" d="M100,100 m-65,0 a65,65 0 0,0 130,0"/>
-  <text font-family="Arial,sans-serif" font-size="9" fill="#a8c4e8" letter-spacing="3">
-    <textPath href="#s2t" startOffset="50%" text-anchor="middle">COMPLETE · LOAD · SOLUTIONS · LLC</textPath>
+  <circle cx="100" cy="100" r="78" fill="none" stroke="#4a7cc7" stroke-width="1" opacity="0.4"/>
+  <text x="100" y="115" font-family="Arial,Helvetica,sans-serif" font-size="46" font-weight="700" fill="#e8f1f8" text-anchor="middle">CLS</text>
+  <line x1="55" y1="125" x2="145" y2="125" stroke="#4a7cc7" stroke-width="1" opacity="0.6"/>
+  <text x="100" y="141" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#7aaad4" text-anchor="middle">EST. 2016</text>
+  <defs>
+    <path id="ct1" d="M 26,100 A 74,74 0 1,1 174,100"/>
+    <path id="cb1" d="M 36,100 A 64,64 0 0,0 164,100"/>
+  </defs>
+  <text font-family="Arial,Helvetica,sans-serif" font-size="9" fill="#a8c4e8">
+    <textPath href="#ct1" startOffset="8%">COMPLETE · LOAD · SOLUTIONS · LLC</textPath>
   </text>
-  <text font-family="Arial,sans-serif" font-size="8" fill="#7aaad4" letter-spacing="3">
-    <textPath href="#s2b" startOffset="50%" text-anchor="middle">VERIFIED · CERTIFIED · TRUSTED</textPath>
+  <text font-family="Arial,Helvetica,sans-serif" font-size="8" fill="#7aaad4">
+    <textPath href="#cb1" startOffset="10%">VERIFIED · CERTIFIED · TRUSTED</textPath>
   </text>
 </svg>
 
@@ -1490,20 +1541,21 @@
     </div>
 
     <div class="company-block fade-in">
-      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <svg width="60" height="60" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
   <circle cx="100" cy="100" r="95" fill="#1a3a6b" stroke="#4a7cc7" stroke-width="4"/>
-  <circle cx="100" cy="100" r="82" fill="none" stroke="#4a7cc7" stroke-width="1.5" opacity="0.5"/>
-  <circle cx="100" cy="100" r="68" fill="none" stroke="#4a7cc7" stroke-width="0.75" opacity="0.25"/>
-  <text x="100" y="108" font-family="Arial,sans-serif" font-size="48" font-weight="700" fill="#e8f1f8" text-anchor="middle">CLS</text>
-  <line x1="50" y1="118" x2="150" y2="118" stroke="#4a7cc7" stroke-width="1" opacity="0.6"/>
-  <text x="100" y="134" font-family="Arial,sans-serif" font-size="11" fill="#7aaad4" text-anchor="middle">EST. 2016</text>
-  <path id="s3t" d="M100,100 m-80,0 a80,80 0 1,1 160,0"/>
-  <path id="s3b" d="M100,100 m-65,0 a65,65 0 0,0 130,0"/>
-  <text font-family="Arial,sans-serif" font-size="9" fill="#a8c4e8" letter-spacing="3">
-    <textPath href="#s3t" startOffset="50%" text-anchor="middle">COMPLETE · LOAD · SOLUTIONS · LLC</textPath>
+  <circle cx="100" cy="100" r="78" fill="none" stroke="#4a7cc7" stroke-width="1" opacity="0.4"/>
+  <text x="100" y="115" font-family="Arial,Helvetica,sans-serif" font-size="46" font-weight="700" fill="#e8f1f8" text-anchor="middle">CLS</text>
+  <line x1="55" y1="125" x2="145" y2="125" stroke="#4a7cc7" stroke-width="1" opacity="0.6"/>
+  <text x="100" y="141" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#7aaad4" text-anchor="middle">EST. 2016</text>
+  <defs>
+    <path id="ct2" d="M 26,100 A 74,74 0 1,1 174,100"/>
+    <path id="cb2" d="M 36,100 A 64,64 0 0,0 164,100"/>
+  </defs>
+  <text font-family="Arial,Helvetica,sans-serif" font-size="9" fill="#a8c4e8">
+    <textPath href="#ct2" startOffset="8%">COMPLETE · LOAD · SOLUTIONS · LLC</textPath>
   </text>
-  <text font-family="Arial,sans-serif" font-size="8" fill="#7aaad4" letter-spacing="3">
-    <textPath href="#s3b" startOffset="50%" text-anchor="middle">VERIFIED · CERTIFIED · TRUSTED</textPath>
+  <text font-family="Arial,Helvetica,sans-serif" font-size="8" fill="#7aaad4">
+    <textPath href="#cb2" startOffset="10%">VERIFIED · CERTIFIED · TRUSTED</textPath>
   </text>
 </svg>
       <div>
@@ -1672,20 +1724,21 @@
 
 <!-- ── FOOTER ── -->
 <footer>
-  <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <svg width="60" height="60" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
   <circle cx="100" cy="100" r="95" fill="#1a3a6b" stroke="#4a7cc7" stroke-width="4"/>
-  <circle cx="100" cy="100" r="82" fill="none" stroke="#4a7cc7" stroke-width="1.5" opacity="0.5"/>
-  <circle cx="100" cy="100" r="68" fill="none" stroke="#4a7cc7" stroke-width="0.75" opacity="0.25"/>
-  <text x="100" y="108" font-family="Arial,sans-serif" font-size="48" font-weight="700" fill="#e8f1f8" text-anchor="middle">CLS</text>
-  <line x1="50" y1="118" x2="150" y2="118" stroke="#4a7cc7" stroke-width="1" opacity="0.6"/>
-  <text x="100" y="134" font-family="Arial,sans-serif" font-size="11" fill="#7aaad4" text-anchor="middle">EST. 2016</text>
-  <path id="s4t" d="M100,100 m-80,0 a80,80 0 1,1 160,0"/>
-  <path id="s4b" d="M100,100 m-65,0 a65,65 0 0,0 130,0"/>
-  <text font-family="Arial,sans-serif" font-size="9" fill="#a8c4e8" letter-spacing="3">
-    <textPath href="#s4t" startOffset="50%" text-anchor="middle">COMPLETE · LOAD · SOLUTIONS · LLC</textPath>
+  <circle cx="100" cy="100" r="78" fill="none" stroke="#4a7cc7" stroke-width="1" opacity="0.4"/>
+  <text x="100" y="115" font-family="Arial,Helvetica,sans-serif" font-size="46" font-weight="700" fill="#e8f1f8" text-anchor="middle">CLS</text>
+  <line x1="55" y1="125" x2="145" y2="125" stroke="#4a7cc7" stroke-width="1" opacity="0.6"/>
+  <text x="100" y="141" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#7aaad4" text-anchor="middle">EST. 2016</text>
+  <defs>
+    <path id="ct3" d="M 26,100 A 74,74 0 1,1 174,100"/>
+    <path id="cb3" d="M 36,100 A 64,64 0 0,0 164,100"/>
+  </defs>
+  <text font-family="Arial,Helvetica,sans-serif" font-size="9" fill="#a8c4e8">
+    <textPath href="#ct3" startOffset="8%">COMPLETE · LOAD · SOLUTIONS · LLC</textPath>
   </text>
-  <text font-family="Arial,sans-serif" font-size="8" fill="#7aaad4" letter-spacing="3">
-    <textPath href="#s4b" startOffset="50%" text-anchor="middle">VERIFIED · CERTIFIED · TRUSTED</textPath>
+  <text font-family="Arial,Helvetica,sans-serif" font-size="8" fill="#7aaad4">
+    <textPath href="#cb3" startOffset="10%">VERIFIED · CERTIFIED · TRUSTED</textPath>
   </text>
 </svg>
   <div class="footer-name">Complete Load Solutions LLC</div>
